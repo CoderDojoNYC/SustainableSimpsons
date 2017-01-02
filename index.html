@@ -1,0 +1,268 @@
+<html lang="en">
+  <head>
+    <style media="screen" type="text/css">
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      ul {
+        width: 100%;
+        height: 70px;
+        list-style: none;
+      }
+      li {
+        position: absolute;
+        width: 60px;
+        height: 90px;
+        left: 400px;
+        float: left;
+      }
+      li:nth-child(1) {
+        left: -74px;
+      }
+      li > span {
+        position: absolute;
+        width: 14px;
+        height: 25px;
+        right: -14px;
+      }
+      li > span.top {
+        top: 12px;
+      }
+      li > span.bottom {
+        bottom: 12px;
+      }
+      li > span:before {
+        content: "";
+        position: absolute;
+        width: 7px;
+        height: 12.5px;
+        right: 0px;
+        background-color: rgba(255,255,255,0.3);
+      }
+      .lego {
+        position: relative;
+        width: 90px;
+        margin-right: 20px;
+        float: left;
+        top: 190px;
+        margin-left: 20px
+      }
+
+      .lego::before {
+        position: absolute;
+        height: 10px;
+        width: 25px;
+        background: #fdbe3d;
+        content: '';
+        left: 10px;
+        top: 45px;
+      }
+
+      .lego::after {
+        position: absolute;
+        height: 10px;
+        width: 25px;
+        background: #fdbe3d;
+        content: '';
+        right: 10px;
+        top: 45px;
+      }
+
+      .homer {
+        height: 54px;
+        box-shadow:
+          0px 54px 0 #fdbe3d,
+          0px 108px 0 #fdbe3d,
+          0px 162px 0 #e5e0dc,
+          0px 216px 0 #e5e0dc,
+          0px 270px 0 #406d96,
+          0px 324px 0 #406d96;
+      }
+
+      .marge {
+        height: 54px;
+        top: -25px;
+        box-shadow:
+          0px 54px 0 #024b9a,
+          0px 108px 0 #024b9a,
+          0px 162px 0 #024b9a,
+          0px 216px 0 #024b9a,
+          0px 270px 0 #fdbe3d,
+          0px 324px 0 #fdbe3d,
+          0px 378px 0 #b4be4e,
+          0px 432px 0 #b4be4e,
+          0px 486px 0 #b4be4e,
+          0px 540px 0 #b4be4e;
+      }
+
+      .marge::after,
+      .marge::before{
+        background: #024b9a;
+      }
+
+      .bart {
+        height: 54px;
+        top: 299px;
+        box-shadow:
+          0px 54px 0 #fdbe3d,
+          0px 108px 0 #fdbe3d,
+          0px 162px 0 #bb2e25,
+          0px 216px 0 #356d92;
+      }
+
+      .lisa {
+        height: 54px;
+        top: 299px;
+        box-shadow:
+          0px 54px 0 #fdbe3d,
+          0px 108px 0 #fdbe3d,
+          0px 162px 0 #ce5826,
+          0px 216px 0 #ce5826;
+      }
+
+      .maggie {
+        height: 54px;
+        top: 406px;
+        box-shadow:
+          0px 54px 0 #fdbe3d,
+          0px 108px 0 #6b90bc;
+      }
+      .trash {
+        position: absolute;
+        left: 13px;
+        top: 25px;
+        z-index: 2;
+        width: 14px;
+        color: white;
+      }
+      .water {
+        text-align: center;
+        color: white;
+        height: 50px;
+        background-color: blue;
+        width: 400px;
+        position: relative;
+        float: left;
+        top: 84%;
+        margin-left: 200px;
+      }
+      .water::after, .water::before {
+        background: blue;
+      }
+
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lego Builder</title>
+  </head>
+  <body>
+
+    <div class="lego homer"></div>
+    <div class="lego marge"></div>
+    <div class="lego bart"></div>
+    <div class="lego maggie"></div>
+    <div class="water">
+      <span>Hudson River</span>
+    </div>
+
+    <div class="wrapper">
+      <div class="container">
+        <ul>
+          <li style="background-color: grey;">
+            <span class="top" style="background-color: grey;"></span>
+            <span class="bottom" style="background-color: grey;"></></span>
+            <span class="trash">trash</span>
+          </li>
+          <li style="background-color: grey;">
+            <span class="top" style="background-color: grey;"></span>
+            <span class="bottom" style="background-color: grey;"></span>
+            <span class="trash">trash</span>
+          </li>
+          <li style="background-color: grey">
+            <span class="top" style="background-color: grey"></span>
+            <span class="bottom" style="background-color: grey"></span>
+            <span class="trash">trash</span>
+          </li>
+          <li style="background-color: grey;">
+            <span class="top" style="background-color: grey;"></span>
+            <span class="bottom" style="background-color: grey;"></span>
+            <span class="trash">trash</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(document).ready(Bricks);
+
+    function Bricks() {
+      var settings = {
+        container : $('.container').children('ul'),
+        height : $(document).height()/2-45, //35 = 1/2 heigh li
+        width : $(document).width()/2-240, //200 = count li * li.width
+      }
+      settings.elWidth = settings.width;
+
+      settings.container.find('li').each(function(i,el) {
+        settings.elWidth += 60;
+        $(el).css('top',settings.height);
+        if(i != 0){
+          $(el).css('left',settings.elWidth);
+        }
+      });
+
+      addSettings(settings);
+
+
+      function addSettings(settings) {
+        settings.elements = settings.container.find('li');
+        settings.first = settings.elements.first();
+        settings.last = settings.elements.last();
+
+        bricksAnimate(settings);
+      }
+
+      function bricksAnimate(settings) {
+        settings.first.stop().animate({
+          left: settings.width + 60
+        },150, function() {
+          /* stuff to do after animation is complete */
+          settings.last.prevAll().andSelf().each(function(i, el) {
+            var elPositionLeft = parseInt($(el).css('left'));
+            $(el).stop().animate({
+              left: elPositionLeft + 60
+            },200, function() {});
+          })
+          /* stuff to do after animation is complete */
+          settings.last.stop().animate({
+            left: settings.width+330
+          },150, function() {
+            /* stuff to do after animation is complete */
+            settings.last.delay(30).stop().animate({
+              top: settings.height*2
+            },200, function() {
+              /* stuff to do after animation is complete */
+              $(settings.last).prependTo(settings.container);
+              settings.last.css({'top': settings.height, 'left':'-74px'});
+              addSettings(settings);
+            });
+          });
+        });
+      }
+    }
+
+    $(window).resize(Bricks);
+  </script>
+</html>
