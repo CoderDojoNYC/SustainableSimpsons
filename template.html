@@ -164,7 +164,7 @@
     </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lego Builder</title>
+    <title>Sustainable Simpsons</title>
   </head>
   <body>
 
@@ -210,16 +210,16 @@
     function Bricks() {
       var settings = {
         container : $('.container').children('ul'),
-        height : $(document).height()/2-45, //35 = 1/2 heigh li
-        width : $(document).width()/2-240, //200 = count li * li.width
+        height : $(document).height() / 2-45, //35 = 1/2 heigh li
+        width : $(document).width() / 2-240, //200 = count li * li.width
       }
       settings.elWidth = settings.width;
 
-      settings.container.find('li').each(function(i,el) {
+      settings.container.find('li').each(function (i,el) {
         settings.elWidth += 60;
-        $(el).css('top',settings.height);
-        if(i != 0){
-          $(el).css('left',settings.elWidth);
+        $(el).css('top', settings.height);
+        if (i != 0) {
+          $(el).css('left', settings.elWidth);
         }
       });
 
@@ -239,7 +239,7 @@
           left: settings.width + 60
         },150, function() {
           /* stuff to do after animation is complete */
-          settings.last.prevAll().andSelf().each(function(i, el) {
+          settings.last.prevAll().andSelf().each(function (i, el) {
             var elPositionLeft = parseInt($(el).css('left'));
             $(el).stop().animate({
               left: elPositionLeft + 60
@@ -251,11 +251,11 @@
           },150, function() {
             /* stuff to do after animation is complete */
             settings.last.delay(30).stop().animate({
-              top: settings.height*2
+              top: settings.height * 2
             },200, function() {
               /* stuff to do after animation is complete */
               $(settings.last).prependTo(settings.container);
-              settings.last.css({'top': settings.height, 'left':'-74px'});
+              settings.last.css({'top': settings.height, 'left': '-74px'});
               addSettings(settings);
             });
           });

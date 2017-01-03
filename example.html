@@ -1,0 +1,297 @@
+<html lang="en">
+  <head>
+    <style media="screen" type="text/css">
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        background-image: url("http://vignette3.wikia.nocookie.net/simpsons/images/c/ca/742_Evergreen_Terrace.png/revision/latest");
+        background-size:cover;
+        background-position: center;
+      }
+      .wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      ul {
+        width: 100%;
+        height: 70px;
+        list-style: none;
+      }
+      li {
+        position: absolute;
+        width: 60px;
+        height: 90px;
+        left: 400px;
+        float: left;
+      }
+      li:nth-child(1) {
+        left: -74px;
+      }
+      li > span {
+        position: absolute;
+        width: 14px;
+        height: 25px;
+        right: -14px;
+      }
+      li > span.top {
+        top: 12px;
+      }
+      li > span.bottom {
+        bottom: 12px;
+      }
+      li > span:before {
+        content: "";
+        position: absolute;
+        width: 7px;
+        height: 12.5px;
+        right: 0px;
+        background-color: rgba(255,255,255,0.3);
+      }
+      .lego {
+        position: relative;
+        width: 90px;
+        margin-right: 20px;
+        float: left;
+        top: 190px;
+        margin-left: 20px
+      }
+
+      .homer {
+        height: 54px;
+        top: 45px;
+        margin-left: 200px;
+      }
+
+      .marge {
+        height: 54px;
+        top: 250px;
+        margin-left: -30px;
+        margin-right: 80px;
+      }
+      .marge::after,
+      .marge::before{
+        background: #024b9a;
+      }
+      .bart {
+        height: 54px;
+        top: 1px;
+        margin-left: -30px;
+        margin-right: 80px;
+      }
+      .lisa {
+        height: 54px;
+        top: 420px;
+      }
+      .maggie {
+        height: 54px;
+        top: 425px;
+        margin-left: -100px;
+        margin-right: 80px;
+      }
+      .trash {
+        position: absolute;
+        left: 13px;
+        top: 25px;
+        z-index: 2;
+        width: 14px;
+        color: white;
+      }
+      .paper {
+        position: absolute;
+        left: 13px;
+        top: 25px;
+        z-index: 2;
+        width: 14px;
+        color: white;
+      }
+      .bin {
+        position: absolute;
+      }
+      .water {
+        text-align: center;
+        color: white;
+        height: 50px;
+        background-color: black;
+        position: relative;
+        width: 300px;
+        float: left;
+        top: 90%;
+        margin-left: 7px;
+      }
+      .composte {
+        text-align: center;
+        color: white;
+        height: 50px;
+        background-color: #41682f
+          ;
+        position: relative;
+        width: 200px;
+        float: left;
+        top: 90%;
+        margin-left: 7px;
+      }
+      .recycle {
+        text-align: center;
+        color: white;
+        height: 50px;
+        background-color: #15309b;
+        position: relative;
+        width: 200px;
+        float: left;
+        top: 90%;
+        margin-left: 7px;
+      }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sustainable Simpsons</title>
+  </head>
+  <body>
+    <div class="lego homer">
+      <img width="175" src="https://static.simpsonswiki.com/images/thumb/1/1b/Homer_slipping.png/180px-Homer_slipping.png">
+    </div>
+    <div class="lego marge">
+      <img width="200" src="https://upload.wikimedia.org/wikipedia/en/0/0b/Marge_Simpson.png">
+    </div>
+    <div class="lego bart">
+      <img width="200" src="https://upload.wikimedia.org/wikipedia/en/a/aa/Bart_Simpson_200px.png">
+    </div>
+    <div class="lego maggie">
+      <img width="100" src="https://upload.wikimedia.org/wikipedia/en/9/9d/Maggie_Simpson.png">
+    </div>
+    <div class="lego lisa">
+      <img width="100" src="https://upload.wikimedia.org/wikipedia/en/e/ec/Lisa_Simpson.png">
+    </div>
+    <div class="wrapper">
+      <div class="container">
+        <div class="bin water">
+          <span>Black Hole</span>
+        </div>
+        <div class="bin composte">
+          <span>Compost Bin</span>
+        </div>
+        <div class="bin recycle">
+          <span>Recycle Bin</span>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="container">
+        <ul>
+          <li style="background-color: grey;" id="trashMe">
+            <span class="top" style="background-color: grey;"></span>
+            <span class="bottom" style="background-color: grey;"></span>
+            <span class="trash">trash</span>
+          </li>
+          <li style="background-color:#bfc1c1" id="flyaway">
+            <span class="top" style="background-color: grey"></span>
+            <span class="bottom" style="background-color: grey"></span>
+            <span class="trash">paper</span>
+          </li>
+          <li style="background-color: #24c192;" id="rotten">
+            <span class="top" style="background-color: grey;"></span>
+            <span class="bottom" style="background-color: grey;"></span>
+            <span class="trash">fish</span>
+          </li>
+          <li style="background-color: #7dbf2d;" id="rotten">
+            <span class="top" style="background-color: grey;"></span>
+            <span class="bottom" style="background-color: grey;"></span>
+            <span class="trash">organic waste</span>
+          </li>
+          <li style="background-color: #ff4f4f">
+            <span class="top" style="background-color: grey"></span>
+            <span class="bottom" style="background-color: grey"></span>
+            <span class="trash">cans</span>
+          </li>
+          <li style="background-color: #3568ba;">
+            <span class="top" style="background-color: grey;"></span>
+            <span class="bottom" style="background-color: grey;"></span>
+            <span class="trash">bottles</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(document).ready(Bricks);
+
+    function Bricks() {
+      var settings = {
+        container : $('.container').children('ul'),
+        height : $(document).height()/2-45, //35 = 1/2 heigh li
+        width : $(document).width()/4-240, //200 = count li * li.width
+      }
+      settings.elWidth = settings.width;
+
+      settings.container.find('li').each(function(i,el){
+        settings.elWidth += 60;
+        $(el).css('top',settings.height);
+        if(i != 0){
+          $(el).css('left',settings.elWidth);
+        }
+      });
+
+      addSettings(settings);
+
+
+      function addSettings(settings) {
+        settings.elements = settings.container.find('li');
+        settings.first = settings.elements.first();
+        settings.last = settings.elements.last();
+
+        bricksAnimate(settings);
+      }
+
+      function bricksAnimate(settings) {
+        settings.first.stop().animate({
+          left: settings.width + 60
+        },150, function() {
+          /* stuff to do after animation is complete */
+          settings.last.prevAll().andSelf().each(function(i, el){
+            var elPositionLeft = parseInt($(el).css('left'));
+            $(el).stop().animate({
+              left: elPositionLeft + 60
+            },200, function() {});
+          })
+          /* stuff to do after animation is complete */
+          settings.last.stop().animate({
+            left: settings.width+330
+          },150, function() {
+            /* stuff to do after animation is complete */
+            var directions = {
+              top: settings.height * 2
+            }
+            if (settings.last.attr('id') == 'trashMe') {
+              directions["left"] = 200
+            } else if (settings.last.attr('id') == 'rotten') {
+              directions["left"] = 410
+            } else if (settings.last.attr('id') == 'flyaway') {
+              directions["left"] = 1000
+              directions["top"] = 0
+            } else {
+              directions["left"] = 550
+            }
+            settings.last.delay(30).stop().animate(
+              directions, 200, function() {
+              /* stuff to do after animation is complete */
+              $(settings.last).prependTo(settings.container);
+              settings.last.css({'top': settings.height, 'left':'-74px'});
+              addSettings(settings);
+            });
+          });
+        });
+      }
+    }
+
+    $(window).resize(Bricks);
+  </script>
+</html>
